@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url("assets/bg.jpeg");
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    /* => kesi screen ka size 100vw 1200px se kam hoga to max width 1200px set ho jayega */
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+}
+
+.main .box {
+    height: 70vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+}
+
+.main nav {
+    height: 62px;
+    width: 60vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+nav img {
+    width: 144px;
+}
+
+.hero {
+    height: calc(100% - 105px);
+    color: white;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 18px;
+    text-align: center;
+}
+
+.hero>:nth-child(1) {
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    /* line-height: 50px; */
+}
+@media screen and (max-width:1200px) {
+    .hero>:nth-child(1){
+        font-size: 32px;
+    }
+}
+
+.hero>:nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.hero>:nth-child(3) {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+nav select {
+    background-color: rgba(7, 7, 7, 0.462);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+nav option {
+    color: black;
+}
+
+.btn-top-red {
+    /* padding: 5px 10px; */
+    border-radius: 8px;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 4.5px 10px;
+    border: 1px solid red;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: #B8001F;
+    transition: all 0.1s;
+}
+
+.btn-red {
+    font-weight: bold;
+    padding: 7.5px 71px;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width:1200px) {
+    .hero-btn {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+.hero-btn input {
+    font-weight: 500;
+    padding: 7px 12px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.432);
+    background-color: rgba(60, 59, 59, 0.14);
+    color: white;
+}
+
+@media screen and (max-width:1200px) {
+    .main nav {
+        width: 80vw;
+        margin: auto;
+    }
+}
+
+.separation {
+    background-color: rgb(50, 49, 49);
+    height: 7px;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+}
+
+.first {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:1200px) {
+    .first {
+        flex-direction: column;
+    }
+
+    .first .secImg {
+        padding: 0;
+    }
+
+    .first .secImg video {
+        width: 300px;
+        top: 65px;
+        right: 58px;
+    }
+}
+
+.first .note {
+    width: 40vw;
+    height: 60%;
+    padding: 34px;
+}
+
+@media screen and (max-width:1200px) {
+    .first .note {
+        width: 82vw;
+    }
+}
+
+.first .note :nth-child(1) {
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.first .note :nth-child(2) {
+    font-size: 20px;
+}
+
+.secImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 56px;
+    position: relative;
+}
+
+.secImg img {
+    width: 500px;
+    position: relative;
+    top: 0;
+}
+
+@media screen and (max-width:1200px) {
+    .secImg img {
+        width: 415px;
+    }
+}
+
+.secImg video {
+    width: 365px;
+    position: absolute;
+    top: 134px;
+    right: 126px;
+}
+
+.movies-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 34px auto;
+    padding: 23px;
+    color: white;
+}
+
+.movies-gallery :first-child {
+    font-size: 46px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.767);
+    font-family: "Bungee Tint", sans-serif;
+}
+
+.movies {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    overflow: auto;
+    height: 60vh;
+    width: 90vw;
+}
+
+.movies img {
+    width: 10%;
+    object-fit: cover;
+    border: 1px solid rgba(234, 229, 229, 0.396);
+    border-radius: 20px;
+    transition: all ease-in-out 0.8s;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1200px) {
+    .movies img {
+        width: 30%;
+    }
+}
+
+.movies::-webkit-scrollbar {
+    display: none;
+}
+
+.movies img:hover {
+    width: 25%;
+}
+
+@media screen and (max-width:1200px) {
+    .movies img:hover {
+        width: 60%;
+        transition: all ease-in-out 0.5s;
+    }
+}
+
+.second .note :nth-child(1) {
+    line-height: 54px;
+}
+
+.second .secImg :hover {
+    transform: scale(1.2);
+    transition: ease-in-out 0.8s;
+}
+
+.fourth .secImg :hover {
+    transform: scale(1.2);
+    transition: ease-in-out 0.8s;
+}
+
+.faq {
+    margin: auto;
+    color: white;
+    width: 60vw;
+    text-align: center;
+}
+
+.faq>:nth-child(1) {
+    display: flex;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 35px;
+    justify-content: center;
+}
+
+.faq .questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(81, 76, 76);
+    width: 100%;
+    align-items: center;
+    padding: 23px;
+    border-radius: 12px;
+}
+
+.faq .item:hover {
+    background-color: rgba(183, 177, 177, 0.801);
+    transition: 0.4s;
+}
+
+.faq span {
+    line-height: 90px;
+}
+
+.faq .hero-btn {
+    padding-bottom: 34px;
+}
+
+@media screen and (max-width:1200px) {
+
+    .btn-red {
+        padding: 8.5px 30px;
+    }
+}
+
+footer {
+    max-width: 62vw;
+    color: rgb(145, 138, 138);
+    margin: 40px auto;
+    font-size: 16px;
+}
+
+footer div {
+    margin-bottom: 34px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+ul li {
+    list-style: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+}
+
+@media screen and (max-width:1200px) {
+    .footer {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
